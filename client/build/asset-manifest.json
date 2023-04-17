@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.768c9bdf.css",
+    "main.js": "/static/js/main.41151828.js",
+    "static/media/programando-cropped.svg": "/static/media/programando-cropped.d3692a021ebc601c23a604bbd7c57c9f.svg",
+    "index.html": "/index.html",
+    "main.768c9bdf.css.map": "/static/css/main.768c9bdf.css.map",
+    "main.41151828.js.map": "/static/js/main.41151828.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.768c9bdf.css",
+    "static/js/main.41151828.js"
+  ]
+}

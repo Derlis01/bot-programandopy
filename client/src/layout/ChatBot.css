@@ -1,0 +1,10 @@
+.sidebar {
+    flex: 2;
+}
+
+.chat {
+    min-height: 87vh;
+    max-height: 87vh;
+    flex: 10;
+    overflow-y: scroll;
+}
