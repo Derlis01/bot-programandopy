@@ -36,7 +36,10 @@ const Nav = () => {
       </Link>
 
       <div className="flex mr-14">
-        <Link to="/materiales" className="font-bold underline mr-3">
+        <Link
+          to="https://programandopy.github.io/minibootcamp-v3/"
+          target="about:blank"
+          className="font-bold mr-3 text-violet-400">
           Materiales
         </Link>
         <div href="/" className="font-normal mr-3">

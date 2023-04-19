@@ -15,7 +15,9 @@ dotenv.config()
 const keyPhrase = process.env.JWT_SECRET_KEY
 
 // Cron job
-cron.schedule('0 0 * * *', () => {
+cron.schedule('*/10 * * * *', () => {
+  console.log('Se ejecuta el CRON')
+  processMessages()
   ManageTokenUser()
 })
 
@@ -26,6 +28,7 @@ const ManageTokenUser = async () => {
     user.tokens = 0
     user.accumulated_tokens += removedTokens
     user.save()
+    console.log('Se resetean los tokens de los users')
   })
 }
 
@@ -49,14 +52,9 @@ export const login = async (req, res) => {
       return
     }
 
-    jwt.sign(
-      { id: user._id },
-      keyPhrase,
-      { expiresIn: '30m' },
-      (err, token) => {
-        res.json({ token, name: user.name, email: user.email, id: user._id })
-      }
-    )
+    jwt.sign({ id: user._id }, keyPhrase, { expiresIn: '1d' }, (err, token) => {
+      res.json({ token, name: user.name, email: user.email, id: user._id })
+    })
   } catch (err) {
     res.status(500).json({ error: err })
   }
@@ -130,7 +128,7 @@ export const postMessage = async (req, res) => {
           { role: 'user', content: `${req.body.message.content}` },
         ],
         stream: true,
-        temperature: 0.2,
+        temperature: 0.1,
         stop: ['\ninfo:'],
       }),
     })
@@ -343,15 +341,15 @@ export const processMessages = async (req, res) => {
       skipValue += 25
     }
 
-    await WordKey.findByIdAndUpdate(
-      '6434cfbea482cfc81ee29719',
-      { $set: { wordKeys: allWordKeys } } // Usa $set para reemplazar completamente el array existente con el nuevo
+    await WordKey.findOneAndUpdate(
+      { _id: '6434cfbea482cfc81ee29719' },
+      { wordKeys: allWordKeys },
+      { upsert: true }
     )
 
-    res.status(200).json(allWordKeys)
+    console.log('Se actualizan los WORDKEYS')
   } catch (err) {
     console.error(err)
-    res.status(500).json({ error: 'Ocurrió un error al actualizar el Message' })
   }
 }
 
