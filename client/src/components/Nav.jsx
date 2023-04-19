@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import ProgramandoLogo from '../images/programando-cropped.svg'
+import ProgramandoLogo from '../images/programando-logo.svg'
 import { FaUserCircle } from 'react-icons/fa'
 import '../components/Nav.css'
 import { Link } from 'react-router-dom'
