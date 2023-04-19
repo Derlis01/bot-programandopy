@@ -19,7 +19,7 @@ function Input({ sendMessage }) {
       <input
         className="w-4/5 h-10 px-3 rounded-lg bg-gray-600 text-white focus:outline-none focus:ring-2 focus:ring-blue-700"
         type="text"
-        placeholder="Escribe tu mensaje aquí..."
+        placeholder="Explícame las condicionales de JavaScript con objetos de la vida real"
         maxLength="250"
         onChange={handleChange}
         value={value.content} // añadir el valor actual del input

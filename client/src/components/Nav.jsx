@@ -62,8 +62,8 @@ const Nav = () => {
       </div>
 
       {isOpen && (
-        <div className="absolute top-20 right-10 bg-gray-900 text-slate-50 shadow-lg p-2">
-          <button className="font-medium mb-2" onClick={handleLogout}>
+        <div className="absolute top-20 z-50 right-10 bg-gray-800 text-slate-50 shadow-lg p-2">
+          <button className="font-medium" onClick={handleLogout}>
             Logout
           </button>
         </div>
