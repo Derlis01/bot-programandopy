@@ -15,7 +15,7 @@ dotenv.config()
 const keyPhrase = process.env.JWT_SECRET_KEY
 
 // Cron job
-cron.schedule('*/10 * * * *', () => {
+cron.schedule('0 0 * * *', () => {
   console.log('Se ejecuta el CRON')
   processMessages()
   ManageTokenUser()
