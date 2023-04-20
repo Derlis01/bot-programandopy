@@ -6,7 +6,15 @@ Es un chatbot diseñado para ayudar a los estudiantes de programación a compren
 
 ## Imágenes del proyecto
 
+### Principal:
 [![Captura-de-pantalla-156.png](https://i.postimg.cc/NMDRGFGq/Captura-de-pantalla-156.png)](https://postimg.cc/6278Y9GY)
+
+### Encontrar errores en código
+[![Captura-de-pantalla-158.png](https://i.postimg.cc/CKV8jkzp/Captura-de-pantalla-158.png)](https://postimg.cc/w103ztXw)
+
+### Estadistica para profesores
+[![Captura-de-pantalla-159.png](https://i.postimg.cc/ZqTRbcWn/Captura-de-pantalla-159.png)](https://postimg.cc/K1HFQtrh)
+
 
 ## Tecnologías utilizadas
 
