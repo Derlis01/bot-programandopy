@@ -25,6 +25,7 @@ Es un chatbot diseñado para ayudar a los estudiantes de programación a compren
 ## Frontend 
 - React
 - Tailwind
+- React Router Dom
 
 ## Backend 
 - Node / Express
